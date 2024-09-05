@@ -27,3 +27,4 @@ function calculateEndTime() {
         document.getElementById("result").textContent = "Bitte alle Felder korrekt ausfüllen.";
     }
 }
+

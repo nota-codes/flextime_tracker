@@ -1,57 +1,144 @@
+/* Allgemeine Stilsetzung für die gesamte Seite */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #e0f7fa;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
+/* Container für den Hauptinhalt */
 .container {
-    width: 300px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  padding: 25px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Titel des Rechners */
 h1 {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #007BFF;
 }
 
+/* Stile für die Eingabegruppen */
 .input-group {
-    margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #333;
 }
 
 input {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
+/* Button-Stile */
 button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 18px;
+  background: linear-gradient(to bottom, #4dc7d9 0%,#66a6ff 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
 }
 
 button:hover {
-    background-color: #0056b3;
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
 }
 
+button:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button span {
+  display: block;
+  margin-left: 0.4em;
+  transition: all 0.3s;
+}
+
+button svg {
+  width: 18px;
+  height: 18px;
+  fill: white;
+  transition: all 0.3s;
+}
+
+button .svg-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-right: 0.5em;
+  transition: all 0.3s;
+}
+
+button:hover .svg-wrapper {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+button:hover svg {
+  transform: rotate(45deg);
+}
+
+/* Ausgabe-Stile */
 .output {
-    margin-top: 20px;
+  margin-top: 25px;
+  text-align: center;
 }
 
 p {
-    font-size: 18px;
-    text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  color: #007BFF;
+}
+
+/* Mobile Anpassungen */
+@media (max-width: 600px) {
+  .container {
+      width: 90%;
+      padding: 20px;
+  }
+
+  h1 {
+      font-size: 22px;
+  }
+
+  button {
+      font-size: 16px;
+      padding: 8px;
+  }
+
+  p {
+      font-size: 16px;
+  }
 }
